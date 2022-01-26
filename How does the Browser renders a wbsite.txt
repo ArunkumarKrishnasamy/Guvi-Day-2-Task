@@ -1,0 +1,15 @@
+How does the browser renders a website ?
+        Website rendering consists of many steps such as parsing, layout, painting etc.
+        In parsing We have got two processes. One will parse the HTML other will parse CSS and then combined to the "Render tree" or Frame tree.
+        That combined bit will be put in layout of its absolute positions and then "painting" is done toadd all the graphics and drawings in the Website.
+
+Parsing HTML :
+        Parsing is the process of reading HTML content and constructing a DOM tree from it. Hence the process is also called DOM parsing and the program that does that is called the DOM parser.
+        When the browser request for a webpage and server responds with some HTML text, a browser may start parsing the HTML.
+        The browser parses HTML from top to bottom and not anywhere in the middle since the HTML represents a nested tree-like structure.
+
+Render-Blocking CSS:
+        The browser engines inside your browser construct the DOM tree from HTML content received as a text document from the server. Similarly, it constructs the CSSOM tree from the stylesheet content such as from an external CSS file or embedded CSS in the HTML.
+        Both DOM and CSSOM tree constructions happen on the main thread and these trees are getting constructed concurrently. Together they form the Render Tree that is used to print things on the screen which is also getting built incrementally as the DOM tree is getting constructed.
+        Once it was fully downloaded, the window’s load event was fired which marks that the webpage (application) is fully loaded.
+        
